@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('lecturers', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->nullable()->constrained();
-            $table->string('name')->nullable();
             $table->string('lecturer_number')->unique()->nullable(); // nip
             $table->foreignId('study_program_id')->nullable()->constrained();
             $table->string('phone_number')->unique()->nullable();
