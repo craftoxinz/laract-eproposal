@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->nullable()->constrained();
             $table->string('student_number')->unique()->nullable(); // nim
+            $table->string('class')->nullable();
             $table->foreignId('study_program_id')->nullable()->constrained();
             $table->unsignedSmallInteger('academic_year')->nullable();
             $table->string('phone_number')->unique()->nullable();
